@@ -88,11 +88,11 @@ contract SecondCrowdsale is ICOEngineInterface, KYCBase {
     }
 
     function totalTokens() public view returns (uint) {
-        return token.totalSupply();
+        return cap;
     }
 
     function remainingTokens() public view returns (uint) {
-        return token.totalSupply().sub(soldTokens);
+        return cap.sub(soldTokens);
     }
 
     function price() public view returns (uint) {
