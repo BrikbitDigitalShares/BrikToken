@@ -116,9 +116,9 @@ contract SecondCrowdsale is ICOEngineInterface, KYCBase {
     function _getCurrentRate() internal returns (uint256) {
 
         uint256 rate;
-        if (now < (openingTime + 1 hours)) {
+        if (now < (openingTime + XXX hours)) {
             rate = XXXXXXXXXXXXXXXX;
-        } else if (now < (openingTime + 2 hours)) {
+        } else if (now < (openingTime + XXX hours)) {
             rate = XXXXXXXXXXXXXXXX;
         } else {
             rate = XXXXXXXXXXXXXXXX;

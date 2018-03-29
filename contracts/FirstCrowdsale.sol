@@ -148,7 +148,7 @@ contract FirstCrowdsale is Ownable, ICOEngineInterface, KYCBase {
     function releaseTokensTo(address _buyer) internal returns(bool) {
         uint amount = msg.value.mul(price()); // get token amount 
         _preValidatePurchase(_buyer, msg.value); // prevalidate purchase
-        require(block.number >= startTime() && block.number <= endTime()); // prevalidate purch
+        require(now >= startTime() && now <= endTime()); // prevalidate purchase
         weiRaised = weiRaised.add(msg.value); //update state
         wallet.transfer(msg.value); // forward funds
         require(token.transferFrom(tokenOwner, _buyer, amount)); //deliver tokens required
