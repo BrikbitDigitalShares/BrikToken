@@ -20,6 +20,9 @@ const SIGNER_ADDR = '0x627306090abaB3A6e1400e9345bC60c78a8BEf57'.toLowerCase()
 const OTHER_PK = Buffer.from('0dbbe8e4ae425a6d2687f1a7e3ba17bc98c673636790f1b8ad91193c05875ef1', 'hex')
 const OTHER_ADDR = '0xC5fdf4076b8F3A5357c5E395ab970B5B54098Fef'.toLowerCase()
 const MAX_AMOUNT = '1000000000000000000'
+const FIRST_CAP = 25000000000000000000000000; // allowance for first crowdsale
+const SECOND_CAP = 75000000000000000000000000; // allowance for second crowdsale
+const MIN_CONTR = 1000000000000000000; // 1 eth
 
 const errorMsg = 'VM Exception while processing transaction: revert';
 
