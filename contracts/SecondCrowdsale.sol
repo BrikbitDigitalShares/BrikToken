@@ -88,7 +88,7 @@ contract SecondCrowdsale is ICOEngineInterface, KYCBase {
     }
 
     function totalTokens() public view returns (uint) {
-        return cap;
+        return cap.div(10**18);
     }
 
     function remainingTokens() public view returns (uint) {
@@ -113,7 +113,7 @@ contract SecondCrowdsale is ICOEngineInterface, KYCBase {
         require(weiRaised.add(_weiAmount) <= cap);
     }
 
-    function _getCurrentRate() internal returns (uint256) {
+    function _getCurrentRate() internal view returns (uint256) {
 
         uint256 rate;
         if (now < (openingTime + XXX hours)) {

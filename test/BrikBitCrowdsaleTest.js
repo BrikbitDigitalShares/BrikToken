@@ -72,16 +72,16 @@ contract('BrikBit ICO', function (accounts) {
 
         it('should approve firstCrowdsale to sell on owner s behalf', async () => {
 
-            await token.approve(firstCrowdsale.address, '25000000')
+            await token.approve(firstCrowdsale.address, '25000000 * 10 ** 18')
             const allow = await token.allowance.call(owner, firstCrowdsale.address)
-            allow.should.be.bignumber.equal('25000000')
+            allow.should.be.bignumber.equal(FIRST_CAP)
         })
 
         it('should approve secondCrowdsale to sell on owner s behalf', async () => {
 
-            await token.approve(secondCrowdsale.address, '75000000')
+            await token.approve(secondCrowdsale.address, '75000000 * 10 ** 18')
             const allow = await token.allowance.call(owner, secondCrowdsale.address)
-            allow.should.be.bignumber.equal('75000000')
+            allow.should.be.bignumber.equal(SECOND_CAP)
         })
     })
 

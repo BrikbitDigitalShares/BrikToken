@@ -114,7 +114,7 @@ contract FirstCrowdsale is Ownable, ICOEngineInterface, KYCBase {
     }
 
     function totalTokens() public view returns (uint) {
-        return cap;
+        return cap.div(10**18);
     }
 
     function remainingTokens() public view returns (uint) {
